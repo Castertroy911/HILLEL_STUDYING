@@ -2,6 +2,7 @@ class FormulaError(ValueError):
     pass
 
 
+# Нашел это решение в интернете, сам о таком к сожалению не знал((
 try:
     first_value, operand, second_value = input('Enter the formula: ').split()
     first_value = float(first_value)
