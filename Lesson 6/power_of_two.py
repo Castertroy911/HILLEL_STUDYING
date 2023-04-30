@@ -17,5 +17,3 @@ def power_of_two(number):
         print('Yes')
     else:
         print('No')
-
-power_of_two(entered_number)
