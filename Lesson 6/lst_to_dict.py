@@ -1,6 +1,3 @@
-entered_list = input('Please, enter the list of any values: ').split()
-
-
 # Я видел, что по условиям задания предполагается, что список будет содержать валидные значения для создания
 # словаря, но все же решил перестраховаться и преобразовать полученный словарь в set(), чтобы убрать дубликаты
 def to_dict(lst):
@@ -9,3 +6,9 @@ def to_dict(lst):
     for i in working_lst:
         dictionary[i] = i
     return dictionary
+
+
+if __name__ == '__main__':
+    entered_list = input('Please, enter the list of any values: ').split()
+
+    print(to_dict(entered_list))
