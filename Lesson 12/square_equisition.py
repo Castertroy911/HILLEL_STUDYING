@@ -10,7 +10,7 @@ class SquareEquisition:
         parser.add_argument('-b', type=int, help=
                             'This is parameter "b" of the second degree equation ax² + bx + c = 0')
         parser.add_argument('-c', type=int, help=
-                            'This is parameter "b" of the second degree equation ax² + bx + c = 0')
+                            'This is parameter "с" of the second degree equation ax² + bx + c = 0')
         args = parser.parse_args()
         return args
 
