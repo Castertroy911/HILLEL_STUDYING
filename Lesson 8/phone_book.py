@@ -6,15 +6,16 @@ class Interface:
     def _action_to_do() -> str:
         action = input(f'Hello! \nIf you want to add new subscriber to the phone book - enter "add". '
                        f'\nIf you want to edit already added subscriber - enter "edit".'
-                       f'\nIf you want to delete the subscriber from the phone book - enter "delete".\n')
+                       f'\nIf you want to delete the subscriber from the phone book - enter "delete".'
+                       f'\nIf you want to stop program - enter "stop".\n')
         return action
 
     @staticmethod
     def _get_users_data() -> tuple:
-        name = input(f'[Required field]\nPlease, enter the subscribers name --> ')
-        second_name = input(f'[Optional field]\nPlease, enter the subscribers second name --> ')
-        phone_number = input(f'[Required field]\nPlease, enter the subscribers phone number --> ')
-        birth_date = input(f'[Optional field]\nPlease, enter the subscribers birth date --> ')
+        name = str(input(f'[Required field]\nPlease, enter the subscribers name --> '))
+        second_name = str(input(f'[Optional field]\nPlease, enter the subscribers second name --> '))
+        phone_number = str(input(f'[Required field]\nPlease, enter the subscribers phone number --> '))
+        birth_date = str(input(f'[Optional field]\nPlease, enter the subscribers birth date --> '))
         return name, phone_number, second_name, birth_date
 
 
@@ -24,30 +25,29 @@ class PhoneBook(Interface):
     __FIRE_STATION = 103
 
     def __init__(self):
-        self.action = self._action_to_do()
         self.users_data = self._get_users_data()
         self.subscriber = Subscriber(*self.users_data)
 
     def start(self):
-        self.action.lower()
-        if self.action != 'add' and self.action != 'edit' and self.action != 'delete':
+        action = self._action_to_do()
+        action = action.lower()
+        if action != 'add' and action != 'edit' and action != 'delete':
             raise Exception(f'Entered action is not supported! Rerun program and try again. '
                             f'Valid arguments: "add", "edit", "delete"!')
-        elif self.action == 'add':
+        elif action == 'add':
             self.add_subscriber(*self.users_data)
-        elif self.action == 'edit':
+        elif action == 'edit':
             self.edit_subscriber(*self.users_data)
         else:
             self.delete_subscriber(*self.users_data)
 
     def add_subscriber(self, name: str, phone_number: int, birth_date: int = None, second_name: str = None):
-        if self.subscriber.is_phone_number() and self.subscriber.is_name() and self.subscriber.is_second_name() and self.subscriber.is_birth_date():
+        if self.subscriber.is_phone_number():
             self.subscriber.data[phone_number] = [name, second_name, birth_date]
 
     def edit_subscriber(self, name: str, phone_number: int, birth_date: int = None, second_name: str = None):
         if self.subscriber.data.get(phone_number) is not None:
             self.subscriber.data[phone_number] = [name, second_name, birth_date]
-
 
     def delete_subscriber(self, name: str, phone_number: int, birth_date: int = None, second_name: str = None):
         if self.subscriber.data.get(phone_number) is not None:
@@ -68,25 +68,10 @@ class Subscriber:
     def is_phone_number(self):
         if isinstance(self.__phone_number, str) and '+' in self.__phone_number:
             return True
-        return False
-
-    def is_name(self):
-        if isinstance(self.__name, str):
-            return True
-        return False
-
-    def is_birth_date(self):
-        if isinstance(self.__birth_date, str) or self.__birth_date is None:
-            return True
-        return False
-
-    def is_second_name(self):
-        if isinstance(self.__second_name, str) or self.__birth_date is None:
-            return True
-        return False
+        raise Exception('Phone number should start with "+"')
 
 
 if __name__ == '__main__':
     a = PhoneBook()
     a.start()
-    a.subscriber.data
+    print(a.subscriber.data)
