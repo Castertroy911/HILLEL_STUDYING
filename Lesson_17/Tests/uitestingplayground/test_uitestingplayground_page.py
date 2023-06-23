@@ -1,9 +1,11 @@
+import allure
 import pytest
 from Lesson_17.Pages.uitestingplayground.client_side_delay_page import ClientsSideDelayPage
 from Lesson_17.Pages.uitestingplayground.dynamic_id_page import DynamicIdPage
 from Lesson_17.Pages.uitestingplayground.verify_text_page import VerifyTextPage
 
 
+@allure.story('Test scope for "uitestingplayground" site')
 @pytest.mark.uitestingplayground
 @pytest.mark.all_tests
 class TestUitestingplaygroundPage:

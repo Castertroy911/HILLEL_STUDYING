@@ -1,9 +1,11 @@
+import allure
 import pytest
 from Lesson_17.Pages.herokuapp.checkboxes_page import CheckboxesPage
 from Lesson_17.Pages.herokuapp.dropdown_list_page import DropdownListPage
 from Lesson_17.Pages.herokuapp.disappearing_elements_page import DisappearingElementsPage
 
 
+@allure.story('Test scope for "herokuapp" site')
 @pytest.mark.herokuapp
 @pytest.mark.all_tests
 class TestHerokuappPage:

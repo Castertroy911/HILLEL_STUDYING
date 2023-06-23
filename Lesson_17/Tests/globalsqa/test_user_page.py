@@ -1,7 +1,8 @@
+import allure
 import pytest
-from Lesson_17.Pages.globalsqa.user_page import UserPage
 
 
+@allure.story('Test scope for "globalsqa" user page')
 @pytest.mark.globalsqa
 @pytest.mark.all_tests
 class TestUserPage:
