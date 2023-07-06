@@ -30,7 +30,7 @@ class TestElementsPage:
         page.check_downloads_checkbox_selected()
 
     def test_radio_button_page(self, browser):
-        page = RadioButtonPage()
+        page = RadioButtonPage(browser)
         page.open_radio_button_page()
         page.select_yes_radio_button()
         page.check_yes_button_selected()
