@@ -3,6 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from Lesson_19.Pages.base_page import BasePage
 
 
+
 class Helper(BasePage):
 
     def find_element_by_xpath(self, path):
@@ -19,3 +20,8 @@ class Helper(BasePage):
     def scroll_and_click(self, element):
         self.scroll_to_element(element)
         element.click()
+
+    def switch_to_new_window(self, tab_index):
+        tabs = self.browser.window_handles
+        self.browser.switch_to.window(tabs[tab_index])
+

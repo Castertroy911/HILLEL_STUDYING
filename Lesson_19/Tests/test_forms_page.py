@@ -2,7 +2,7 @@ import pytest
 from Lesson_19.Pages.forms_page import FormsPage
 
 
-@pytest.mark.test
+@pytest.mark.lesson_19
 class TestFormsPage:
 
     def test_forms_page(self, browser):

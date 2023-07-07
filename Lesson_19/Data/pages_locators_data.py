@@ -2,7 +2,6 @@ class HomePageLocators:
     ELEMENTS_PAGE_LOCATOR = '//h5[contains(text(), "Elements")]'
     FORMS_PAGE_LOCATOR = '//h5[contains(text(), "Forms")]'
     ALERTS_PAGE_LOCATOR = '//h5[contains(text(), "Alerts, Frame & Windows")]'
-    INTERACTIONS_PAGE_LOCATOR = '//h5[contains(text(), "Interactions")]'
     HOME_PAGE_LOCATOR = '//header/a'
 
 
@@ -64,4 +63,16 @@ class PracticeFormPageLocators:
     SUBMIT_BUTTON = '//button[@class="btn btn-primary"]'
     CONFIRM_MODAL_FORM = '//div[@id="example-modal-sizes-title-lg"]'
     CLOSE_MODAL_BUTTON = '//button[@id="closeLargeModal"]'
+
+
+class AllertsPageLocators:
+    BROWSER_WINDOWS = '//div[@class="element-list collapse show"]//li[@id="item-0"]'
+    ALERTS = '//div[@class="element-list collapse show"]//li[@id="item-1"]'
+
+
+class BrowserWindowPageLocators:
+    NEW_TAB = '//button[@id="tabButton"]'
+    NEW_WINDOW = '//button[@id="windowButton"]'
+    TEXT_ON_NEW_TAB = '//h1[@id="sampleHeading"]'
+    TEXT_IN_NEW_WINDOW = '//h1[@id="sampleHeading"]'
 

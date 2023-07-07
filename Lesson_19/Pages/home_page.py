@@ -18,19 +18,12 @@ class HomePage(Helper):
     def check_forms_page_is_opened(self):
         self.check_page_open('forms')
 
-    def open_alerts_page(self):
+    def open_alerts_and_windows_page(self):
         element = self.find_element_by_xpath(HP.ALERTS_PAGE_LOCATOR)
         self.scroll_and_click(element)
 
-    def check_alerts_page_open(self):
+    def check_alerts_and_windows_page_open(self):
         self.check_page_open('alertsWindows')
-
-    def open_interactions_page(self):
-        element = self.find_element_by_xpath(HP.INTERACTIONS_PAGE_LOCATOR)
-        self.scroll_and_click(element)
-
-    def check_interactions_page_open(self):
-        self.check_page_open('interaction')
 
     def back_to_home_page(self):
         element = self.find_element_by_xpath(HP.HOME_PAGE_LOCATOR)

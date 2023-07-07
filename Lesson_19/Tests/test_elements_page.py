@@ -2,7 +2,7 @@ import pytest
 from Lesson_19.Pages.elements_page import *
 
 
-@pytest.mark.test
+@pytest.mark.lesson_19
 class TestElementsPage:
 
     def test_elements_page(self, browser):
