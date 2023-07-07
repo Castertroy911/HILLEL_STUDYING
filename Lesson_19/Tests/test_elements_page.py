@@ -1,7 +1,9 @@
+import allure
 import pytest
 from Lesson_19.Pages.elements_page import *
 
 
+@allure.suite('Elements page')
 @pytest.mark.lesson_19
 class TestElementsPage:
 

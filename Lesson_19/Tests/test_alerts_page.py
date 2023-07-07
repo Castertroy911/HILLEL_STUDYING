@@ -1,7 +1,9 @@
+import allure
 import pytest
 from Lesson_19.Pages.alerts_page import BrowserWindowsPage
 
 
+@allure.suite('Alerts page')
 @pytest.mark.lesson_19
 class TestAlertsPage:
 

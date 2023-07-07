@@ -1,7 +1,9 @@
+import allure
 import pytest
 from Lesson_19.Pages.forms_page import FormsPage
 
 
+@allure.suite('Forms page')
 @pytest.mark.lesson_19
 class TestFormsPage:
 
