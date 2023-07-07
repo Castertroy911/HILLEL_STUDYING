@@ -37,3 +37,31 @@ class RadioButtonPageLocators:
     IMPRESSIVE_RADIO_BUTTON = '//label[@for="impressiveRadio"]'
     NO_RADIO_BUTTON = '//label[@for="noRadio"]'
     SELECTED_BUTTON_LOCATOR = '//span[@class="text-success"]'
+
+
+class FormsPageLocators:
+    PRACTICE_FORM_PAGE = '//li[@id="item-0"]/span[contains(text(), "Practice Form")]'
+    WIDGETS_PAGE_LOCATOR = '(//span[@class="pr-1"])[4]'
+
+
+class PracticeFormPageLocators:
+    FIRST_NAME = '//input[@id="firstName"]'
+    LAST_NAME = '//input[@id="lastName"]'
+    EMAIL = '//input[@id="userEmail"]'
+    GENDER = '//label[@for="gender-radio-1"]'
+    MOBILE = '//input[@id="userNumber"]'
+    DATE_OF_BIRTH_FIELD = '//input[@id="dateOfBirthInput"]'
+    DATE_OF_BIRTH_DAY = '//div[@class="react-datepicker__day ' \
+                        'react-datepicker__day--002 react-datepicker__day--weekend"]'
+    SUBJECT = '//div[@class="subjects-auto-complete__value-container '\
+              'subjects-auto-complete__value-container--is-multi css-1hwfws3"]'
+    HOBBIES_SPORT = '//label[@for="hobbies-checkbox-1"]'
+    HOBBIES_MUSIC = '//label[@for="hobbies-checkbox-3"]'
+    PICTURE = '//input[@id="uploadPicture"]'
+    CURRENT_ADDRESS = '//textarea[@id="currentAddress"]'
+    STATE = '//div[@class=" css-1hwfws3"]'
+    CITY = '(//div[@class=" css-1hwfws3"])[2]'
+    SUBMIT_BUTTON = '//button[@class="btn btn-primary"]'
+    CONFIRM_MODAL_FORM = '//div[@id="example-modal-sizes-title-lg"]'
+    CLOSE_MODAL_BUTTON = '//button[@id="closeLargeModal"]'
+

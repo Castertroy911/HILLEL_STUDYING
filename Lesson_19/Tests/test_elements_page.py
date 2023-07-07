@@ -1,6 +1,8 @@
+import pytest
 from Lesson_19.Pages.elements_page import *
 
 
+@pytest.mark.test
 class TestElementsPage:
 
     def test_elements_page(self, browser):

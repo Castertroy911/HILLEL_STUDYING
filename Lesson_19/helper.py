@@ -15,3 +15,7 @@ class Helper(BasePage):
 
     def scroll_to_element(self, element):
         self.browser.execute_script("arguments[0].scrollIntoView(true);", element)
+
+    def scroll_and_click(self, element):
+        self.scroll_to_element(element)
+        element.click()

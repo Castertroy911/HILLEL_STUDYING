@@ -10,18 +10,15 @@ class ElementsPage(HomePage):
 
     def open_text_box_page(self):
         element = self.find_element_by_xpath(EP.TEXT_BOX_PAGE_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def open_check_box_page(self):
         element = self.find_element_by_xpath(EP.CHECK_BOX_PAGE_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def open_radio_button_page(self):
         element = self.find_element_by_xpath(EP.RADIO_BUTTON_PAGE_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
 
 class TextBoxPage(ElementsPage):
@@ -48,8 +45,7 @@ class TextBoxPage(ElementsPage):
 
     def press_submit_button(self):
         element = self.find_element_by_xpath(TBL.SUBMIT_BUTTON_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def check_full_name(self):
         name = self.find_element_by_xpath(TBL.CHECK_FULL_NAME_LOCATOR)
@@ -81,13 +77,11 @@ class CheckBoxPage(ElementsPage):
     def select_desktop_checkbox(self):
         self.find_element_by_xpath(CBL.COLLAPSE_LIST).click()
         element = self.find_element_by_xpath(CBL.DESKTOP_CHECKBOX_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def select_downloads_checkbox(self):
         element = self.find_element_by_xpath(CBL.DESKTOP_CHECKBOX_LOCATOR)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def check_desktop_checkbox_selected(self):
         class_data = self.find_element_by_xpath(CBL.DESKTOP_CHECKBOX_LOCATOR)
@@ -106,13 +100,11 @@ class RadioButtonPage(ElementsPage):
 
     def select_yes_radio_button(self):
         element = self.find_element_by_xpath(RBL.YES_RADIO_BUTTON)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def select_impressive_radio_button(self):
         element = self.find_element_by_xpath(RBL.IMPRESSIVE_RADIO_BUTTON)
-        self.scroll_to_element(element)
-        element.click()
+        self.scroll_and_click(element)
 
     def check_yes_button_selected(self):
         text = self.find_element_by_xpath(RBL.SELECTED_BUTTON_LOCATOR)
