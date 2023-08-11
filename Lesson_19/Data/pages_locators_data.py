@@ -75,4 +75,3 @@ class BrowserWindowPageLocators:
     NEW_WINDOW = '//button[@id="windowButton"]'
     TEXT_ON_NEW_TAB = '//h1[@id="sampleHeading"]'
     TEXT_IN_NEW_WINDOW = '//h1[@id="sampleHeading"]'
-

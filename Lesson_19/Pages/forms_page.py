@@ -54,5 +54,3 @@ class FormsPage(HomePage):
         form = WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.XPATH, PF.CONFIRM_MODAL_FORM)))
         assert form, 'Confirmation modal form is not showed'
         self.find_element_by_xpath(PF.CLOSE_MODAL_BUTTON).click()
-
-

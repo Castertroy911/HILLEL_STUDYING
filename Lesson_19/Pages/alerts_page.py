@@ -37,4 +37,3 @@ class BrowserWindowsPage(AlertsPage):
         assert text == 'This is a sample page', 'Text in new window is not correct'
         self.browser.close()
         self.switch_to_new_window(0)
-

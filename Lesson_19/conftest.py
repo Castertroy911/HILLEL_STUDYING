@@ -11,4 +11,3 @@ def browser():
     driver.get('https://demoqa.com/')
     yield driver
     driver.quit()
-

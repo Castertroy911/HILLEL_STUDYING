@@ -1,6 +1,6 @@
 import allure
 import pytest
-from Lesson_19.Pages.elements_page import *
+from Lesson_19.Pages.elements_page import ElementsPage, TextBoxPage, CheckBoxPage, RadioButtonPage
 
 
 @allure.suite('Elements page')
